@@ -91,18 +91,27 @@
             box-shadow: 0 10px 30px rgba(198, 107, 107, 0.04);
         }
 
-        .step-card::before {
-            content: "PASAPORTE MAZ";
+        /* CINTA EN DOS LÍNEAS */
+        .ribbon-maz {
             position: absolute;
-            top: 15px;
-            right: -35px;
+            top: 14px;
+            right: -32px;
             background: var(--maz-red);
             color: white;
-            font-size: 9px;
-            padding: 6px 45px;
+            font-size: 8.5px;
+            padding: 4px 0;
             transform: rotate(45deg);
-            font-weight: bold;
-            letter-spacing: 1px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-align: center;
+            width: 115px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.1;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .step-card:hover {
@@ -229,15 +238,19 @@
 
         <div id="paso-01" class="flex flex-col md:flex-row items-center justify-between mb-36 relative z-10 group/item scroll-mt-28">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">01</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Prepara tu equipaje</h3>
                 </div>
                 <div class="icon-box group-hover/item:rotate-12 transition-transform duration-500"><i class="fas fa-luggage-cart"></i></div>
                 <h4 class="text-lg font-bold text-[#c66b6b] mb-2">Elige tu destino</h4>
-                <p class="text-gray-600 text-sm leading-relaxed">
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
                     Inicia esta aventura explorando nuestros proyectos y elige el lugar donde quieres construir tus próximos recuerdos. Nuestro equipo estará listo para darte una guía totalmente personalizada.
                 </p>
+                <a href="https://maz.com.co/proyectos/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#c66b6b] text-white text-xs font-bold px-5 py-3 rounded-xl uppercase tracking-wider hover:bg-red-800 transition-colors shadow-md">
+                    Explorar Destinos <i class="fas fa-compass"></i>
+                </a>
             </div>
             <div class="hidden md:block w-2/12 text-center text-4xl text-[#c66b6b]/20 group-hover/item:text-[#c66b6b] transition-colors duration-500">
                 <i class="fas fa-map-marked-alt"></i>
@@ -250,22 +263,18 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
+        <div id="paso-02" class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">02</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Reserva tu tiquete</h3>
                 </div>
                 <div class="icon-box group-hover/item:scale-110 transition-transform duration-500"><i class="fas fa-ticket-alt"></i></div>
                 <h4 class="text-lg font-bold text-[#c66b6b] mb-2">Separa tu inmueble</h4>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Es hora de asegurar tu lugar en el vuelo. Te guiaremos con los documentos necesarios de forma ágil y segura sin salir de casa, estructurados especialmente según tu perfil:
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Es hora de asegurar tu lugar en el vuelo. Te guiaremos con los documentos necesarios de forma ágil y segura, sin salir de casa, para que vivas un proceso fácil, organizado y pensado para ti.
                 </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-[#fdf5f2] text-[#c66b6b] text-[11px] font-bold px-3 py-1 rounded-full border border-[#c66b6b]/20">Empleado</span>
-                    <span class="bg-[#fdf5f2] text-[#c66b6b] text-[11px] font-bold px-3 py-1 rounded-full border border-[#c66b6b]/20">Independiente</span>
-                    <span class="bg-[#fdf5f2] text-[#c66b6b] text-[11px] font-bold px-3 py-1 rounded-full border border-[#c66b6b]/20">Pensionado</span>
-                </div>
             </div>
             <div class="hidden md:block w-2/12 text-center text-4xl text-[#c66b6b]/20 group-hover/item:text-[#c66b6b] transition-colors duration-500">
                 <i class="fas fa-passport"></i>
@@ -278,8 +287,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center justify-between mb-36 relative z-10 group/item">
+        <div id="paso-03" class="flex flex-col md:flex-row items-center justify-between mb-36 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">03</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Conecta con aliados</h3>
@@ -301,8 +311,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
+        <div id="paso-04" class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">04</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Confirma itinerario</h3>
@@ -324,8 +335,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center justify-between mb-36 relative z-10 group/item">
+        <div id="paso-05" class="flex flex-col md:flex-row items-center justify-between mb-36 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">05</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Listos para despegue</h3>
@@ -333,7 +345,7 @@
                 <div class="icon-box group-hover/item:translate-y-[-5px] transition-transform duration-500"><i class="fas fa-plane-takeoff"></i></div>
                 <h4 class="text-lg font-bold text-[#c66b6b] mb-2">Firma de escritura</h4>
                 <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Estamos en la pista listos para despegar hacia la meta. Te notificaremos con la antelación debida el día, la notaría presencial y los requisitos exactos.
+                    Estamos en la pista, listos para despegar hacia esta gran meta. Te notificaremos oportunamente la fecha, la notaría asignada y los requisitos necesarios para este importante momento.
                 </p>
                 <div class="bg-red-50/80 p-3 rounded-xl border-l-4 border-[#c66b6b] text-[11px] text-gray-600 font-medium italic">
                     <i class="fas fa-info-circle mr-1 text-[#c66b6b]"></i> Revisa con cuidado la minuta de escrituración que llegará adjunta a tu correo electrónico.
@@ -350,8 +362,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
+        <div id="paso-06" class="flex flex-col md:flex-row-reverse items-center justify-between mb-36 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0 border-2 border-[#c66b6b] bg-white">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">06</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">¡Llegamos a destino!</h3>
@@ -373,8 +386,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center justify-between mb-20 relative z-10 group/item">
+        <div id="paso-07" class="flex flex-col md:flex-row items-center justify-between mb-20 relative z-10 group/item">
             <div class="w-full md:w-5/12 step-card p-8 ml-12 md:ml-0">
+                <div class="ribbon-maz"><span>PASAPORTE</span><span>MAZ</span></div>
                 <div class="flex items-center gap-4 mb-6">
                     <div class="step-number">07</div>
                     <h3 class="text-lg md:text-xl font-bold text-gray-800 uppercase tracking-tighter">Seguimos en ruta</h3>
@@ -404,25 +418,28 @@
             <p class="text-gray-500 mb-10 italic">"Nuestra tripulación corporativa está lista para acompañarte en cada kilómetro del trayecto hacia tu nuevo espacio."</p>
             
             <div class="flex justify-center gap-6 mb-12">
-                <a href="#" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=573175151196&text=Hola%20Maz%20Proyectos%20Inmobiliarios" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/mazproyectosinmobiliarios/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/mazproyectosinmobiliarios" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@mazproyectosinmobiliarios" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#c66b6b] hover:text-white text-gray-600 transition-all shadow-sm"><i class="fab fa-youtube"></i></a>
             </div>
             
+            <p class="text-[11px] text-gray-400 italic mb-5 flex items-center justify-center gap-1.5 font-medium">
+                <i class="fas fa-heart text-[9px] text-[#c66b6b]/60"></i> Un itinerario diseñado con dedicación por nuestra Área de Experiencia del Cliente Maz.
+            </p>
+            
             <div class="text-[10px] text-gray-400 uppercase tracking-widest border-t pt-8">
-                MAZ CONSTRUCTORA © 2026 - TU HOGAR, NUESTRO DESTINO
+                MAZ PROYECTOS INMOBILIARIOS SAS © 2026 - TU HOGAR, NUESTRO DESTINO
             </div>
         </div>
     </footer>
 
     <script>
-        // Función interactiva para abrir/cerrar el Check-in
         function toggleModal() {
             const modal = document.getElementById('checkinModal');
             modal.classList.toggle('hidden');
         }
 
-        // Animación mejorada del avión e iluminación de la estela siguiendo el scroll
         const plane = document.getElementById('plane');
         const pathFill = document.getElementById('pathFill');
         const timelineSection = document.getElementById('viaje');
@@ -441,7 +458,6 @@
             pathFill.style.height = planePos + 'px';
         });
 
-        // Revelación fluida mediante IntersectionObserver
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
